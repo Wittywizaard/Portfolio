@@ -44,12 +44,6 @@ const socialIcons: Record<string, ReactNode> = {
   ),
 };
 
-const summaryItems = [
-  '2+ years driving product strategy, growth, and operational delivery across SaaS and B2B programs.',
-  'Built MIS reporting, funnel analytics, and AI-driven outreach processes to improve efficiency.',
-  'Led stakeholder alignment, cross-functional program execution, and data-informed decisions.',
-];
-
 const experiences = [
   {
     title: 'Business Development Associate',
@@ -277,7 +271,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative z-10"
             >
-              <p className="mb-4 text-sm uppercase tracking-[0.6em] text-slate-500">Hello, I'm</p>
+              <p className="mb-4 text-sm uppercase tracking-[0.6em] text-slate-500">Hello, I&apos;m</p>
               <h1 className="text-5xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Tanya <span className="bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">Chaudhary</span>
               </h1>
