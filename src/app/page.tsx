@@ -262,6 +262,8 @@ export default function Home() {
       <main className="relative overflow-hidden">
         <div className="floating-ball absolute right-[-8rem] top-20 h-72 w-72 rounded-full bg-violet-500/10 blur-3xl" />
         <div className="floating-ball absolute left-[-8rem] bottom-16 h-72 w-72 rounded-full bg-sky-400/10 blur-3xl" />
+        <div className="floating-ball absolute left-1/2 top-1/3 h-96 w-96 rounded-full bg-pink-500/5 blur-3xl" />
+        <div className="floating-ball absolute right-1/4 bottom-1/4 h-64 w-64 rounded-full bg-blue-500/8 blur-3xl" />
 
         <section id="hero" className="relative min-h-[90vh] overflow-hidden px-4 pt-16 pb-24 sm:px-6 lg:px-8">
           <div className="floating-ball absolute -left-20 top-14 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl" />
@@ -277,7 +279,7 @@ export default function Home() {
             >
               <p className="mb-4 text-sm uppercase tracking-[0.6em] text-slate-500">Hello, I'm</p>
               <h1 className="text-5xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Tanya <span className="text-sky-400">Chaudhary</span>
+                Tanya <span className="bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">Chaudhary</span>
               </h1>
               <p className="mx-auto mt-4 max-w-3xl text-xl font-medium text-slate-300 sm:text-2xl">
                 Product Management | Product Strategy | Data & User Analytics.
@@ -293,7 +295,7 @@ export default function Home() {
                   Get In Touch
                 </button>
                 <a
-                  href="/resume.pdf"
+                  href="https://drive.google.com/uc?export=download&id=1wckar8nDUPaI1qvSTCNt169j5Q81vk3e"
                   download
                   className="rounded-full border border-white/15 bg-white/5 px-8 py-3 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/10"
                 >
@@ -351,8 +353,9 @@ export default function Home() {
                   key={exp.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.02, y: -5 }}
                   transition={{ delay: index * 0.1 }}
-                  className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+                  className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] hover:shadow-[0_40px_100px_rgba(56,189,248,0.15)] transition-all duration-300 hover:border-sky-400/30"
                 >
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                     <div>
@@ -384,8 +387,9 @@ export default function Home() {
                   key={skill.category}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.05, rotateY: 5 }}
                   transition={{ delay: index * 0.1 }}
-                  className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+                  className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] hover:shadow-[0_40px_100px_rgba(139,92,246,0.15)] transition-shadow duration-300"
                 >
                   <p className="text-sm uppercase tracking-[0.35em] text-slate-500">{skill.category}</p>
                   <ul className="mt-6 space-y-3 text-slate-300 text-sm leading-7">
@@ -453,8 +457,9 @@ export default function Home() {
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.05, y: -10 }}
                   transition={{ delay: index * 0.1 }}
-                  className="group block rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] transition hover:-translate-y-1 hover:border-sky-400/30 hover:bg-slate-900"
+                  className="group block rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:bg-slate-900 hover:shadow-[0_40px_100px_rgba(56,189,248,0.2)]"
                 >
                   <div className="flex items-center justify-between gap-4">
                     <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Project</p>
@@ -528,6 +533,23 @@ export default function Home() {
                       <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Location</p>
                       <p className="mt-2 text-base">Pune, Maharashtra</p>
                     </div>
+                  </div>
+                </div>
+                <div className="mt-8">
+                  <p className="text-sm uppercase tracking-[0.35em] text-slate-500 mb-4">Follow Me</p>
+                  <div className="flex gap-3">
+                    {socialLinks.map((link) => (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:border-white/20 hover:bg-white/10 hover:text-white"
+                        aria-label={link.label}
+                      >
+                        {socialIcons[link.label]}
+                      </a>
+                    ))}
                   </div>
                 </div>
               </motion.div>
