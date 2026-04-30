@@ -325,7 +325,7 @@ export default function Home() {
                 <p className="mb-4 text-sm uppercase tracking-[0.35em] text-slate-500">About</p>
                 <h2 className="text-3xl font-semibold text-white">Computer Science graduate and Growth-focused Product Manager.</h2>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300">
-                  Computer Science graduate and Growth-focused Product Manager with 2.5+ years of experience in product strategy, analytics, and cross-functional execution. Proven ability to translate user behavior into data-driven decisions, define KPIs, and improve conversion and engagement. Experienced in Agile environments with hands-on exposure to sprint planning, backlog refinement, and cross-team coordination. Strong in leveraging AI tools, analytics, and experimentation to drive product outcomes.
+                  Computer Science graduate and Growth-focused Product Manager with experience in product strategy, analytics, and cross-functional execution. Proven ability to translate user behavior into data-driven decisions, define KPIs, and improve conversion and engagement. Experienced in Agile environments with hands-on exposure to sprint planning, backlog refinement, and cross-team coordination. Strong in leveraging AI tools, analytics, and experimentation to drive product outcomes.
                 </p>
               </div>
               <div className="rounded-[2rem] border border-white/10 bg-slate-950/90 p-4 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
@@ -407,14 +407,14 @@ export default function Home() {
         <section id="achievements" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Achievements</motion.h2>
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="mt-10 flex flex-col gap-6 xl:flex-row xl:items-start">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+                className="min-w-[20rem] rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
               >
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-500">PMP Certification</p>
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-4">
                   {certifications.map((cert) => (
                     <div key={cert.title}>
                       <h3 className="text-xl font-semibold text-white">{cert.title}</h3>
@@ -424,27 +424,25 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
-              >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Internships</p>
-                <div className="mt-6 space-y-6">
-                  {internships.map((internship) => (
-                    <div key={internship.title}>
-                      <h3 className="text-lg font-semibold text-white">{internship.title}</h3>
-                      <p className="mt-1 text-sm text-slate-400">{internship.organization}</p>
-                      <p className="mt-2 text-sm text-slate-300 leading-7">{internship.note}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
+              {internships.map((internship) => (
+                <motion.div
+                  key={internship.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  className="min-w-[20rem] rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+                >
+                  <p className="text-sm uppercase tracking-[0.35em] text-slate-500">{internship.organization}</p>
+                  <div className="mt-6">
+                    <h3 className="text-xl font-semibold text-white">{internship.title}</h3>
+                    <p className="mt-2 text-sm text-slate-300 leading-7">{internship.note}</p>
+                  </div>
+                </motion.div>
+              ))}
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+                className="min-w-[20rem] rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
               >
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Awards</p>
                 <div className="mt-6 space-y-6">
@@ -499,7 +497,7 @@ export default function Home() {
               className="mt-10 rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
             >
               <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Bachelor of Technology</p>
-              <h3 className="mt-3 text-2xl font-semibold text-white">Computer Science Engineering with specialization in cybersecurity & digital forensics</h3>
+              <h3 className="mt-3 text-2xl font-semibold text-white">Computer Science Engineering with Specialization in Cybersecurity & Digital Forensics</h3>
               <p className="mt-3 text-sm text-slate-400">Parul University | Oct 2021 - Dec 2025</p>
               <p className="mt-6 max-w-3xl text-slate-300 leading-7">
                 Completed a rigorous program focused on networking, cybersecurity, and software development, combined with practical internships and outcomes-driven product experience.
