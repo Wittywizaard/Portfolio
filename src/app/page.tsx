@@ -104,19 +104,6 @@ const certifications = [
   },
 ];
 
-const internships = [
-  {
-    title: 'Product Management Internship',
-    organization: 'Electronic Arts',
-    note: 'Hands-on experience in product strategy and execution.',
-  },
-  {
-    title: 'Project Management Internship',
-    organization: 'CBRE',
-    note: 'Focused on project tracking and stakeholder management.',
-  },
-];
-
 const projects = [
   {
     title: 'Customer Segmentation & Growth Opportunity Analysis',
@@ -407,41 +394,6 @@ export default function Home() {
         <section id="achievements" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Achievements</motion.h2>
-            <div className="mt-10 flex flex-col gap-6 xl:flex-row xl:items-start">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="min-w-[20rem] rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
-              >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">PMP Certification</p>
-                <div className="mt-6 space-y-4">
-                  {certifications.map((cert) => (
-                    <div key={cert.title}>
-                      <h3 className="text-xl font-semibold text-white">{cert.title}</h3>
-                      <p className="mt-2 text-base text-slate-300 leading-7">{cert.note}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="min-w-[20rem] rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
-              >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Internships</p>
-                <div className="mt-6 space-y-6">
-                  {internships.map((internship) => (
-                    <div key={internship.title}>
-                      <h3 className="text-xl font-semibold text-white">{internship.title}</h3>
-                      <p className="mt-1 text-sm text-slate-400">{internship.organization}</p>
-                      <p className="mt-2 text-sm text-slate-300 leading-7">{internship.note}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-
             <div className="mt-10 rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
               <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Awards</p>
               <div className="mt-6 grid gap-6 md:grid-cols-2">
