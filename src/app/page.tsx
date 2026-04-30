@@ -424,36 +424,39 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {internships.map((internship) => (
-                <motion.div
-                  key={internship.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  className="min-w-[20rem] rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
-                >
-                  <p className="text-sm uppercase tracking-[0.35em] text-slate-500">{internship.organization}</p>
-                  <div className="mt-6">
-                    <h3 className="text-xl font-semibold text-white">{internship.title}</h3>
-                    <p className="mt-2 text-sm text-slate-300 leading-7">{internship.note}</p>
-                  </div>
-                </motion.div>
-              ))}
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="min-w-[20rem] rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
               >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Awards</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Internships</p>
                 <div className="mt-6 space-y-6">
-                  {awards.map((award) => (
-                    <div key={award.title} className="rounded-lg border border-white/5 bg-slate-900/50 p-4">
-                      <h3 className="text-lg font-semibold text-white">{award.title}</h3>
-                      <p className="mt-2 text-slate-300 leading-7">{award.description}</p>
+                  {internships.map((internship) => (
+                    <div key={internship.title}>
+                      <h3 className="text-xl font-semibold text-white">{internship.title}</h3>
+                      <p className="mt-1 text-sm text-slate-400">{internship.organization}</p>
+                      <p className="mt-2 text-sm text-slate-300 leading-7">{internship.note}</p>
                     </div>
                   ))}
                 </div>
               </motion.div>
+            </div>
+
+            <div className="mt-10 rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Awards</p>
+              <div className="mt-6 grid gap-6 md:grid-cols-2">
+                {awards.map((award) => (
+                  <motion.div
+                    key={award.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="rounded-[1.5rem] border border-white/10 bg-slate-900/80 p-6"
+                  >
+                    <h3 className="text-lg font-semibold text-white">{award.title}</h3>
+                    <p className="mt-3 text-slate-300 leading-7">{award.description}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
