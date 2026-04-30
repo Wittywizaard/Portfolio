@@ -100,7 +100,11 @@ const certifications = [
     title: 'Google Project Management Professional Certification',
     organization: 'Google',
     note: 'Certified in project management methodologies and tools.',
+    isMainCert: true,
   },
+];
+
+const internships = [
   {
     title: 'Product Management Internship',
     organization: 'Electronic Arts',
@@ -326,7 +330,7 @@ export default function Home() {
               </div>
               <div className="rounded-[2rem] border border-white/10 bg-slate-950/90 p-4 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
                 <Image
-                  src="/profile.jpg"
+                  src="https://drive.google.com/uc?export=view&id=1YwcbGGaCxXPQ_AWkpWYX30Uc4miCZHzj"
                   alt="Tanya Chaudhary"
                   width={720}
                   height={900}
@@ -403,18 +407,35 @@ export default function Home() {
         <section id="achievements" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Achievements</motion.h2>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
               >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Certifications</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">PMP Certification</p>
                 <div className="mt-6 space-y-6">
                   {certifications.map((cert) => (
                     <div key={cert.title}>
                       <h3 className="text-xl font-semibold text-white">{cert.title}</h3>
                       <p className="mt-2 text-base text-slate-300 leading-7">{cert.note}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+              >
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Internships</p>
+                <div className="mt-6 space-y-6">
+                  {internships.map((internship) => (
+                    <div key={internship.title}>
+                      <h3 className="text-lg font-semibold text-white">{internship.title}</h3>
+                      <p className="mt-1 text-sm text-slate-400">{internship.organization}</p>
+                      <p className="mt-2 text-sm text-slate-300 leading-7">{internship.note}</p>
                     </div>
                   ))}
                 </div>
@@ -478,7 +499,7 @@ export default function Home() {
               className="mt-10 rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
             >
               <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Bachelor of Technology</p>
-              <h3 className="mt-3 text-2xl font-semibold text-white">Computer Science & Engineering with Cybersecurity focus</h3>
+              <h3 className="mt-3 text-2xl font-semibold text-white">Computer Science Engineering with specialization in cybersecurity & digital forensics</h3>
               <p className="mt-3 text-sm text-slate-400">Parul University | Oct 2021 - Dec 2025</p>
               <p className="mt-6 max-w-3xl text-slate-300 leading-7">
                 Completed a rigorous program focused on networking, cybersecurity, and software development, combined with practical internships and outcomes-driven product experience.
@@ -506,17 +527,7 @@ export default function Home() {
                       <p className="mt-2 text-base">tanyachaudhary148@gmail.com</p>
                     </div>
                   </div>
-                  <div className="grid gap-4 sm:grid-cols-[auto_1fr] sm:items-center">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-slate-900/80 text-sky-400">
-                      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
-                        <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1v3.79a1 1 0 0 1-1 1A16 16 0 0 1 3 5a1 1 0 0 1 1-1h3.79a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.2 2.2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Phone</p>
-                      <p className="mt-2 text-base">(+91 8318675167)</p>
-                    </div>
-                  </div>
+
                   <div className="grid gap-4 sm:grid-cols-[auto_1fr] sm:items-center">
                     <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-slate-900/80 text-sky-400">
                       <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
