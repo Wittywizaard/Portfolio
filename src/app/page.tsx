@@ -193,11 +193,8 @@ export default function Home() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl transition-colors duration-500">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-sky-500/20 via-violet-500/20 to-pink-500/20 shadow-lg shadow-black/30">
-              <svg viewBox="0 0 24 24" className="h-5 w-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 12H20" />
-                <path d="M8 7L12 12L8 17" />
-              </svg>
+            <div className="flex h-9 w-9 items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-br from-sky-500/30 via-violet-500/30 to-pink-500/30 shadow-lg shadow-black/30 backdrop-blur-sm">
+              <span className="text-sm font-bold bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg animate-pulse" style={{ fontFamily: 'cursive', fontStyle: 'italic', textShadow: '0 0 10px rgba(168, 85, 247, 0.4)' }}>TC</span>
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.35em] text-slate-400">Tanya Chaudhary</p>
