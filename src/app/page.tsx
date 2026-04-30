@@ -193,7 +193,12 @@ export default function Home() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl transition-colors duration-500">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 shadow-lg shadow-black/30" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-sky-500/20 via-violet-500/20 to-pink-500/20 shadow-lg shadow-black/30">
+              <svg viewBox="0 0 24 24" className="h-5 w-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 12H20" />
+                <path d="M8 7L12 12L8 17" />
+              </svg>
+            </div>
             <div>
               <p className="text-xs uppercase tracking-[0.35em] text-slate-400">Tanya Chaudhary</p>
               <p className="text-sm text-slate-200">Product Manager</p>
@@ -312,7 +317,7 @@ export default function Home() {
                 <p className="mb-4 text-sm uppercase tracking-[0.35em] text-slate-500">About</p>
                 <h2 className="text-3xl font-semibold text-white">Computer Science graduate and Growth-focused Product Manager.</h2>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300">
-                  Computer Science graduate and Growth-focused Product Manager with experience in product strategy, analytics, and cross-functional execution. Proven ability to translate user behavior into data-driven decisions, define KPIs, and improve conversion and engagement. Experienced in Agile environments with hands-on exposure to sprint planning, backlog refinement, and cross-team coordination. Strong in leveraging AI tools, analytics, and experimentation to drive product outcomes.
+                  I have experience in product strategy, analytics, and cross-functional execution. Proven ability to translate user behavior into data-driven decisions, define KPIs, and improve conversion and engagement. Experienced in Agile environments with hands-on exposure to sprint planning, backlog refinement, and cross-team coordination. Strong in leveraging AI tools, analytics, and experimentation to drive product outcomes.
                 </p>
               </div>
               <div className="rounded-[2rem] border border-white/10 bg-slate-950/90 p-4 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
