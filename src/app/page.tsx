@@ -398,7 +398,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="achievements" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
+        <section id="achievements" className="relative border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
+          <div className="floating-ball absolute right-[-6rem] top-10 h-64 w-64 rounded-full bg-pink-500/8 blur-3xl" />
+          <div className="floating-ball absolute left-[-4rem] bottom-20 h-48 w-48 rounded-full bg-violet-500/10 blur-2xl" />
           <div className="mx-auto max-w-6xl">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Achievements</motion.h2>
             <div className="mt-10 flex flex-col gap-6 xl:flex-row xl:items-start">
@@ -467,7 +469,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="education" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
+        <section id="education" className="relative border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
+          <div className="floating-ball absolute right-[-5rem] top-16 h-56 w-56 rounded-full bg-sky-500/10 blur-3xl" />
+          <div className="floating-ball absolute left-[-6rem] bottom-10 h-72 w-72 rounded-full bg-blue-500/8 blur-2xl" />
           <div className="mx-auto max-w-6xl">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Education</motion.h2>
             <motion.div
