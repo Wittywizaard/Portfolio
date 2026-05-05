@@ -115,6 +115,11 @@ const projects = [
     description: 'Executed end-to-end QA, user stories, and UAT across payment workflows to improve product quality and release readiness.',
     link: 'https://tinyurl.com/3aumecmv',
   },
+  {
+    title: 'DataLens',
+    description: 'Excel-to-Visualization AI Assistant (MVP) Turn spreadsheet data into charts using natural-language prompts.',
+    link: 'https://github.com/Wittywizaard/DataLens-AI',
+  },
 ];
 
 const awards = [
