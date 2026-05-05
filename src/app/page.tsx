@@ -106,6 +106,11 @@ const certifications = [
 
 const projects = [
   {
+    title: 'DataLens',
+    description: 'Excel-to-Visualization AI Assistant (MVP) Turn spreadsheet data into charts using natural-language prompts.',
+    link: 'https://github.com/Wittywizaard/DataLens-AI',
+  },
+  {
     title: 'Customer Segmentation & Growth Opportunity Analysis',
     description: 'Analyzed behavioral data to identify high-value segments, build dashboards, and recommend growth initiatives for increased conversion and retention.',
     link: 'https://tinyurl.com/yc8bfjya',
@@ -114,11 +119,6 @@ const projects = [
     title: 'Digital Wallet QA & UAT Simulation',
     description: 'Executed end-to-end QA, user stories, and UAT across payment workflows to improve product quality and release readiness.',
     link: 'https://tinyurl.com/3aumecmv',
-  },
-  {
-    title: 'DataLens',
-    description: 'Excel-to-Visualization AI Assistant (MVP) Turn spreadsheet data into charts using natural-language prompts.',
-    link: 'https://github.com/Wittywizaard/DataLens-AI',
   },
 ];
 
