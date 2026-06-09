@@ -287,7 +287,7 @@ export default function Home() {
                   Get In Touch
                 </button>
                 <a
-                  href="https://drive.google.com/uc?export=download&id=1CEha0eSLfDCrA7rr190tE7y1P6GEPhwD"
+                  href="https://drive.google.com/file/d/1G3hBFKpGb1-gHtnO9t1IJLw0NopYJHUw/view?usp=sharing"
                   download="Tanya_Chaudhary_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
