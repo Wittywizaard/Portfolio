@@ -8,7 +8,7 @@ const sections = [
   { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Product' },
+  { id: 'projects', label: 'Projects' },
   { id: 'education', label: 'Education' },
   { id: 'techstack', label: 'Skills' },
   { id: 'achievements', label: 'Achievements' },
@@ -188,7 +188,7 @@ export default function Home() {
         <div className="progress-bar h-full rounded-full bg-gradient-to-r from-sky-400 to-violet-500" style={{ width: `${scrollProgress}%` }} />
       </div>
 
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl transition-colors duration-500">
+      <header className="relative border-b border-white/10 bg-slate-950/80 backdrop-blur-xl transition-colors duration-500">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-br from-sky-500/30 via-violet-500/30 to-pink-500/30 shadow-lg shadow-black/30 backdrop-blur-sm">
@@ -367,7 +367,7 @@ export default function Home() {
 
         <section id="projects" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Product</motion.h2>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Projects</motion.h2>
             <div className="mt-12 grid gap-6 md:grid-cols-2">
               {projects.map((project, index) => (
                 <motion.a
