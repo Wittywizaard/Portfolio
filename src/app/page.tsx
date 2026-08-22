@@ -44,6 +44,7 @@ const experiences = [
   {
     title: 'Product Manager & Founder',
     company: 'DataLens AI',
+    companyUrl: 'https://datalens-ai-swart.vercel.app/',
     period: 'May 2026 - Present',
     location: 'India',
     points: [
@@ -292,8 +293,7 @@ export default function Home() {
                   Get In Touch
                 </button>
                 <a
-                  href="https://drive.google.com/uc?export=download&id=1G3hBFKpGb1-gHtnO9t1IJLw0NopYJHUw"
-                  download="Tanya_Chaudhary_Resume.pdf"
+                  href="https://drive.google.com/file/d/1McdbJyddf4eyU6enfDcVPGzFh63AX-NG/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border border-white/15 bg-white/5 px-8 py-3 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/10"
@@ -359,7 +359,23 @@ export default function Home() {
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <p className="text-xl font-semibold text-white">{exp.title}</p>
-                      <p className="text-sm font-medium uppercase tracking-[0.3em] text-slate-500 mt-1">{exp.company}</p>
+                      <div className="text-sm font-medium uppercase tracking-[0.3em] text-slate-500 mt-1">
+                        {'companyUrl' in exp && exp.companyUrl ? (
+                          <a
+                            href={exp.companyUrl as string}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 hover:underline transition-colors lowercase tracking-normal text-sm font-normal"
+                          >
+                            <span className="uppercase tracking-[0.3em] font-medium text-slate-400 hover:text-sky-300 transition-colors">{exp.company}</span>
+                            <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current text-sky-400" aria-hidden="true">
+                              <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" />
+                            </svg>
+                          </a>
+                        ) : (
+                          exp.company
+                        )}
+                      </div>
                     </div>
                     <p className="text-sm font-medium text-slate-400 shrink-0 sm:text-right mt-1 sm:mt-0">{exp.period} · {exp.location}</p>
                   </div>
