@@ -10,6 +10,7 @@ const sections = [
   { id: 'techstack', label: 'Tech Stack' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
+  { id: 'leadership', label: 'Leadership' },
   { id: 'achievements', label: 'Achievements' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -45,11 +46,9 @@ const experiences = [
     period: 'Dec 2025 - Present',
     location: 'Pune, Maharashtra',
     points: [
-      'Led segmented growth initiatives by analyzing customer and lead behavior across campaigns.',
-      'Built MIS dashboards and funnel reporting to improve program visibility and conversion.',
-      'Partnered with product, sales, and marketing teams to operationalize insights into GTM actions.',
-      'Designed outreach automation and AI-supported research workflows to boost efficiency.',
-      'Tracked and improved campaign performance with KPI-driven iteration and reporting.',
+      'Drove a 15% increase in revenue by managing stakeholder relationships effectively, identifying customer needs, and coordinating with internal teams to enhance sales execution, business strategy and customer experience.',
+      'Improved lead-to-customer conversion efficiency by 22% by analyzing customer, Conduct market research and lead data to identify high-value user segments and optimize targeting strategies to meet customer needs.',
+      'Partnered closely with product and cross-functional Go-To-Market (GTM) teams to deliver 3+ data-backed product improvements, optimizing customer touchpoints based on user analytics.',
     ],
   },
   {
@@ -76,18 +75,6 @@ const experiences = [
     ],
   },
   {
-    title: 'Senior Training & Placement Coordinator',
-    company: 'Parul University',
-    period: 'Sep 2022 - Apr 2025',
-    location: 'Vadodara, India',
-    points: [
-      'Recruited and led a cross-functional team of 30+ coordinators for placement initiatives.',
-      'Delivered 50+ programs, managing stakeholder communications and execution quality.',
-      'Developed tracking dashboards to improve reporting and operational efficiency.',
-      'Recognized with Best Contribution in Placement (2024) for delivery success.',
-    ],
-  },
-  {
     title: 'Cybersecurity & VAPT Analyst',
     company: 'Cybersecurity & Digital Forensics',
     period: '2024 - 2025',
@@ -111,8 +98,8 @@ const certifications = [
 
 const projects = [
   {
-    title: 'DataLens',
-    description: 'Excel-to-Visualization AI Assistant (MVP) Turn spreadsheet data into charts using natural-language prompts.',
+    title: 'DataLens AI',
+    description: 'Defined the problem, scoped the MVP, designed an AI-driven workflow and shipped a working product that automated data interpretation and visualization generation, reducing manual analysis effort and improving accessibility to data-driven decision-making, acting as sole PM, designer, and product owner.',
     link: 'https://datalens-ai-swart.vercel.app/',
   },
   {
@@ -472,6 +459,43 @@ export default function Home() {
                   <p className="mt-4 text-slate-300 leading-7">{project.description}</p>
                 </motion.a>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="leadership" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Leadership & Volunteer Experience</motion.h2>
+            <div className="mt-12 space-y-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+                transition={{ delay: 0.1 }}
+                className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] hover:shadow-[0_40px_100px_rgba(56,189,248,0.15)] transition-all duration-300 hover:border-sky-400/30"
+              >
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <p className="text-xl font-semibold text-white">Senior Training & Placement Coordinator</p>
+                    <p className="text-sm uppercase tracking-[0.3em] text-slate-500">Parul University</p>
+                  </div>
+                  <p className="text-sm text-slate-400">Sep 2022 - Apr 2025 · Vadodara, India</p>
+                </div>
+                <ul className="mt-6 space-y-3 text-slate-300">
+                  <li className="flex gap-3 text-sm leading-7">
+                    <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-sky-400" />
+                    <span>Led end-to-end execution of 50+ placement and training programs by managing timelines, stakeholder coordination, and operational workflows, ensuring smooth and timely delivery outcomes.</span>
+                  </li>
+                  <li className="flex gap-3 text-sm leading-7">
+                    <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-sky-400" />
+                    <span>Improved team execution efficiency by 25% by managing and coordinating a team of 30+ members through structured task allocation, progress tracking, and accountability systems.</span>
+                  </li>
+                  <li className="flex gap-3 text-sm leading-7">
+                    <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-sky-400" />
+                    <span>Recognized with the Best Contribution in Placement Award (2024) for driving measurable improvements in coordination efficiency, process execution, and program delivery outcomes.</span>
+                  </li>
+                </ul>
+              </motion.div>
             </div>
           </div>
         </section>
