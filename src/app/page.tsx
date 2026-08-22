@@ -56,7 +56,7 @@ const experiences = [
   {
     title: 'Business Development Associate',
     company: 'SkillEcted Pvt. Ltd.',
-    period: 'Dec 2025 - Present',
+    period: 'Dec 2025 - April 2026',
     location: 'Pune, Maharashtra',
     points: [
       'Drove a 15% increase in revenue by managing stakeholder relationships effectively, identifying customer needs, and coordinating with internal teams to enhance sales execution, business strategy and customer experience.',
@@ -356,18 +356,18 @@ export default function Home() {
                   transition={{ delay: index * 0.1 }}
                   className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] hover:shadow-[0_40px_100px_rgba(56,189,248,0.15)] transition-all duration-300 hover:border-sky-400/30"
                 >
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <p className="text-xl font-semibold text-white">{exp.title}</p>
-                      <p className="text-sm uppercase tracking-[0.3em] text-slate-500">{exp.company}</p>
+                      <p className="text-sm font-medium uppercase tracking-[0.3em] text-slate-500 mt-1">{exp.company}</p>
                     </div>
-                    <p className="text-sm text-slate-400">{exp.period} · {exp.location}</p>
+                    <p className="text-sm font-medium text-slate-400 shrink-0 sm:text-right mt-1 sm:mt-0">{exp.period} · {exp.location}</p>
                   </div>
                   <ul className="mt-6 space-y-3 text-slate-300">
                     {exp.points.map((point, idx) => (
-                      <li key={idx} className="flex gap-3 text-sm leading-7">
-                        <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-sky-400" />
-                        <span>{point}</span>
+                      <li key={idx} className="flex items-start gap-3 text-sm leading-7">
+                        <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-sky-400" />
+                        <span className="flex-1">{point}</span>
                       </li>
                     ))}
                   </ul>
@@ -443,9 +443,9 @@ export default function Home() {
                   <p className="text-sm uppercase tracking-[0.35em] text-slate-500">{skill.category}</p>
                   <ul className="mt-6 space-y-3 text-slate-300 text-sm leading-7">
                     {skill.items.map((item) => (
-                      <li key={item} className="flex gap-3">
-                        <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-400" />
-                        <span>{item}</span>
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-sky-400" />
+                        <span className="flex-1">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -507,25 +507,25 @@ export default function Home() {
                 transition={{ delay: 0.1 }}
                 className="rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] hover:shadow-[0_40px_100px_rgba(56,189,248,0.15)] transition-all duration-300 hover:border-sky-400/30"
               >
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                   <div>
                     <p className="text-xl font-semibold text-white">Senior Training & Placement Coordinator</p>
-                    <p className="text-sm uppercase tracking-[0.3em] text-slate-500">Parul University</p>
+                    <p className="text-sm font-medium uppercase tracking-[0.3em] text-slate-500 mt-1">Parul University</p>
                   </div>
-                  <p className="text-sm text-slate-400">Sep 2022 - Apr 2025 · Vadodara, India</p>
+                  <p className="text-sm font-medium text-slate-400 shrink-0 sm:text-right mt-1 sm:mt-0">Sep 2022 - Apr 2025 · Vadodara, India</p>
                 </div>
                 <ul className="mt-6 space-y-3 text-slate-300">
-                  <li className="flex gap-3 text-sm leading-7">
-                    <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-sky-400" />
-                    <span>Led end-to-end execution of 50+ placement and training programs by managing timelines, stakeholder coordination, and operational workflows, ensuring smooth and timely delivery outcomes.</span>
+                  <li className="flex items-start gap-3 text-sm leading-7">
+                    <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-sky-400" />
+                    <span className="flex-1">Led end-to-end execution of 50+ placement and training programs by managing timelines, stakeholder coordination, and operational workflows, ensuring smooth and timely delivery outcomes.</span>
                   </li>
-                  <li className="flex gap-3 text-sm leading-7">
-                    <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-sky-400" />
-                    <span>Improved team execution efficiency by 25% by managing and coordinating a team of 30+ members through structured task allocation, progress tracking, and accountability systems.</span>
+                  <li className="flex items-start gap-3 text-sm leading-7">
+                    <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-sky-400" />
+                    <span className="flex-1">Improved team execution efficiency by 25% by managing and coordinating a team of 30+ members through structured task allocation, progress tracking, and accountability systems.</span>
                   </li>
-                  <li className="flex gap-3 text-sm leading-7">
-                    <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-sky-400" />
-                    <span>Recognized with the Best Contribution in Placement Award (2024) for driving measurable improvements in coordination efficiency, process execution, and program delivery outcomes.</span>
+                  <li className="flex items-start gap-3 text-sm leading-7">
+                    <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-sky-400" />
+                    <span className="flex-1">Recognized with the Best Contribution in Placement Award (2024) for driving measurable improvements in coordination efficiency, process execution, and program delivery outcomes.</span>
                   </li>
                 </ul>
               </motion.div>
