@@ -7,11 +7,12 @@ import { motion } from 'framer-motion';
 const sections = [
   { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'techstack', label: 'Tech Stack' },
   { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'leadership', label: 'Leadership' },
+  { id: 'projects', label: 'Product' },
+  { id: 'education', label: 'Education' },
+  { id: 'techstack', label: 'Skills' },
   { id: 'achievements', label: 'Achievements' },
+  { id: 'leadership', label: 'Leadership' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -313,7 +314,7 @@ export default function Home() {
                 <p className="mb-4 text-sm uppercase tracking-[0.35em] text-slate-500">About</p>
                 <h2 className="text-3xl font-semibold text-white">Computer Science graduate and Growth-focused Product Manager.</h2>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300">
-                  I have experience in product strategy, analytics, and cross-functional execution. Proven ability to translate user behavior into data-driven decisions, define KPIs, and improve conversion and engagement. Experienced in Agile environments with hands-on exposure to sprint planning, backlog refinement, and cross-team coordination. Strong in leveraging AI tools, analytics, and experimentation to drive product outcomes.
+                  Product Manager who likes getting close to the problem, figuring out what matters, and turning it into something people can actually use. Built and shipped DataLens AI, an AI-powered analytics product, with hands-on experience across discovery, prioritization, UAT, release, and B2B customer insights. My background in cybersecurity, data, and business development helps me connect technical possibilities with real customer and business needs.
                 </p>
               </div>
               <div className="rounded-[2rem] border border-white/10 bg-slate-950/90 p-4 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
@@ -364,9 +365,59 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="projects" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Product</motion.h2>
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {projects.map((project, index) => (
+                <motion.a
+                  key={project.title}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.05, y: -10 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group block rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:bg-slate-900 hover:shadow-[0_40px_100px_rgba(56,189,248,0.2)]"
+                >
+                  <div className="flex items-center justify-between gap-4">
+                    <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Project</p>
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-slate-300 transition group-hover:bg-sky-400 group-hover:text-slate-950">
+                      →
+                    </span>
+                  </div>
+                  <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
+                  <p className="mt-4 text-slate-300 leading-7">{project.description}</p>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="education" className="relative border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
+          <div className="floating-ball absolute right-[-5rem] top-16 h-56 w-56 rounded-full bg-sky-500/10 blur-3xl" />
+          <div className="floating-ball absolute left-[-6rem] bottom-10 h-72 w-72 rounded-full bg-blue-500/8 blur-2xl" />
+          <div className="mx-auto max-w-6xl">
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Education</motion.h2>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="mt-10 rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+            >
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Bachelor of Technology</p>
+              <h3 className="mt-3 text-2xl font-semibold text-white">Computer Science Engineering with Specialization in Cybersecurity & Digital Forensics</h3>
+              <p className="mt-3 text-sm text-slate-400">Parul University | Oct 2021 - Dec 2025</p>
+              <p className="mt-6 max-w-3xl text-slate-300 leading-7">
+                Completed a rigorous program focused on networking, cybersecurity, and software development, combined with practical internships and outcomes-driven product experience.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         <section id="techstack" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Tech Stack</motion.h2>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Skills</motion.h2>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {skills.map((skill, index) => (
                 <motion.div
@@ -433,36 +484,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Projects</motion.h2>
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
-              {projects.map((project, index) => (
-                <motion.a
-                  key={project.title}
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  whileHover={{ scale: 1.05, y: -10 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group block rounded-[1.75rem] border border-white/10 bg-slate-950/85 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:bg-slate-900 hover:shadow-[0_40px_100px_rgba(56,189,248,0.2)]"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Project</p>
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-slate-300 transition group-hover:bg-sky-400 group-hover:text-slate-950">
-                      →
-                    </span>
-                  </div>
-                  <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
-                  <p className="mt-4 text-slate-300 leading-7">{project.description}</p>
-                </motion.a>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="leadership" className="border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Leadership & Volunteer Experience</motion.h2>
@@ -497,26 +518,6 @@ export default function Home() {
                 </ul>
               </motion.div>
             </div>
-          </div>
-        </section>
-
-        <section id="education" className="relative border-t border-white/5 px-4 py-20 sm:px-6 lg:px-8">
-          <div className="floating-ball absolute right-[-5rem] top-16 h-56 w-56 rounded-full bg-sky-500/10 blur-3xl" />
-          <div className="floating-ball absolute left-[-6rem] bottom-10 h-72 w-72 rounded-full bg-blue-500/8 blur-2xl" />
-          <div className="mx-auto max-w-6xl">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-3xl font-semibold text-white">Education</motion.h2>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="mt-10 rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
-            >
-              <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Bachelor of Technology</p>
-              <h3 className="mt-3 text-2xl font-semibold text-white">Computer Science Engineering with Specialization in Cybersecurity & Digital Forensics</h3>
-              <p className="mt-3 text-sm text-slate-400">Parul University | Oct 2021 - Dec 2025</p>
-              <p className="mt-6 max-w-3xl text-slate-300 leading-7">
-                Completed a rigorous program focused on networking, cybersecurity, and software development, combined with practical internships and outcomes-driven product experience.
-              </p>
-            </motion.div>
           </div>
         </section>
 
