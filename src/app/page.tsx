@@ -42,6 +42,18 @@ const socialIcons: Record<string, ReactNode> = {
 
 const experiences = [
   {
+    title: 'Product Manager & Founder',
+    company: 'DataLens AI',
+    period: 'May 2026 - Present',
+    location: 'India',
+    points: [
+      'Identified a clear product gap: non-technical business users were locked out of data insights due to BI tool complexity, defined the problem, scoped the MVP, and shipped a working product.',
+      'Built an Agentic AI data analytics platform utilizing LLMs and natural language processing (NLP) to translate complex data capabilities into real-world business outcomes for non-technical users.',
+      'Solved a key product gap for non-technical users by enabling users to upload datasets and generate automated dashboards, charts, and reports without requiring Power BI expertise.',
+      'Designed an AI-driven workflow that automated data interpretation and visualization generation, reducing manual analysis effort and improving accessibility to data-driven decision-making, acting as sole PM, designer, and product owner.',
+    ],
+  },
+  {
     title: 'Business Development Associate',
     company: 'SkillEcted Pvt. Ltd.',
     period: 'Dec 2025 - Present',
