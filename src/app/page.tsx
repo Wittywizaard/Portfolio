@@ -188,7 +188,7 @@ export default function Home() {
         <div className="progress-bar h-full rounded-full bg-gradient-to-r from-sky-400 to-violet-500" style={{ width: `${scrollProgress}%` }} />
       </div>
 
-      <header className="relative bg-slate-950/80 backdrop-blur-xl transition-colors duration-500">
+      <header className="sticky top-0 z-40 bg-slate-950/50 backdrop-blur-md transition-colors duration-500">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-br from-sky-500/30 via-violet-500/30 to-pink-500/30 shadow-lg shadow-black/30 backdrop-blur-sm">
