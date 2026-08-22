@@ -189,7 +189,7 @@ export default function Home() {
       </div>
 
       <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl transition-colors duration-500">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-br from-sky-500/30 via-violet-500/30 to-pink-500/30 shadow-lg shadow-black/30 backdrop-blur-sm">
               <span className="text-sm font-bold bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg animate-pulse" style={{ fontFamily: 'cursive', fontStyle: 'italic', textShadow: '0 0 10px rgba(168, 85, 247, 0.4)' }}>TC</span>
@@ -200,12 +200,12 @@ export default function Home() {
             </div>
           </div>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-4 lg:gap-6 md:flex ml-auto">
             {sections.map((section) => (
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className={`text-sm font-medium uppercase tracking-[0.2em] transition ${
+                className={`text-xs lg:text-sm font-medium uppercase tracking-[0.15em] transition ${
                   activeSection === section.id ? 'text-white' : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -214,10 +214,10 @@ export default function Home() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 md:hidden">
             <button
               type="button"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:border-white/20 hover:bg-white/10 md:hidden"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:border-white/20 hover:bg-white/10"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
